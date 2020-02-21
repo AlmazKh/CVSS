@@ -1,18 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/tv_result"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textAlignment="center"
+        android:layout_marginTop="@dimen/spacing_large_24"
+        android:text="Выберите следующие параметры и нажмите на кнопку 'Показать результат'"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/font_large_24" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <include
+        android:id="@+id/spinner_av_inc"
+        layout="@layout/spinner_av"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_normal_16"
+        android:layout_marginTop="@dimen/spacing_normal_16"
+        android:layout_marginEnd="@dimen/spacing_normal_16" />
+
+    <include
+        android:id="@+id/spinner_ac_inc"
+        layout="@layout/spinner_ac"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_normal_16"
+        android:layout_marginTop="@dimen/spacing_normal_16"
+        android:layout_marginEnd="@dimen/spacing_normal_16" />
+
+    <include
+        android:id="@+id/spinner_au_inc"
+        layout="@layout/spinner_au"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_normal_16"
+        android:layout_marginTop="@dimen/spacing_normal_16"
+        android:layout_marginEnd="@dimen/spacing_normal_16" />
+
+    <include
+        android:id="@+id/spinner_c_inc"
+        layout="@layout/spinner_c"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_normal_16"
+        android:layout_marginTop="@dimen/spacing_normal_16"
+        android:layout_marginEnd="@dimen/spacing_normal_16" />
+
+    <include
+        android:id="@+id/spinner_i_inc"
+        layout="@layout/spinner_i"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_normal_16"
+        android:layout_marginTop="@dimen/spacing_normal_16"
+        android:layout_marginEnd="@dimen/spacing_normal_16" />
+
+    <include
+        android:id="@+id/spinner_a_inc"
+        layout="@layout/spinner_a"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_normal_16"
+        android:layout_marginTop="@dimen/spacing_normal_16"
+        android:layout_marginEnd="@dimen/spacing_normal_16" />
+
+    <Button
+        android:id="@+id/btn_count"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/text_show_result_btn"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorWhite"
+        android:layout_marginTop="@dimen/spacing_normal_16"/>
+</LinearLayout>

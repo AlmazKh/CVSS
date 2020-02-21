@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">CVSS</string>
+    <string name="text_show_result_btn">Показать результат</string>
 </resources>
