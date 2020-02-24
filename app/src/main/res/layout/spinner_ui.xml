@@ -14,7 +14,7 @@
         tools:ignore="UselessParent">
 
         <Spinner
-            android:id="@+id/spinner_av"
+            android:id="@+id/spinner_ui"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:overlapAnchor="false"
@@ -23,9 +23,9 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/spinner_title_av"
+        android:id="@+id/spinner_title_ui"
         style="@style/SpinnerTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Способ получения доступа(AV)" />
+        android:text="Взаимодействие с пользователем (UI)" />
 </RelativeLayout>

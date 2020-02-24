@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">CVSS</string>
     <string name="text_show_result_btn">Показать результат</string>
+    <string name="text_title_select_smth">Выберите следующие параметры и нажмите на кнопку "Показать результат"</string>
 </resources>

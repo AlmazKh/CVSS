@@ -1,82 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/tv_result"
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:layout_marginTop="@dimen/spacing_large_24"
-        android:text="Выберите следующие параметры и нажмите на кнопку 'Показать результат'"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="@dimen/font_large_24" />
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintBottom_toTopOf="@+id/viewPager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <include
-        android:id="@+id/spinner_av_inc"
-        layout="@layout/spinner_av"
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabBackground="@color/colorPrimary"
+            app:tabGravity="fill"
+            app:tabMode="fixed"
+            app:tabTextColor="@android:color/white" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/spacing_normal_16"
-        android:layout_marginTop="@dimen/spacing_normal_16"
-        android:layout_marginEnd="@dimen/spacing_normal_16" />
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
 
-    <include
-        android:id="@+id/spinner_ac_inc"
-        layout="@layout/spinner_ac"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/spacing_normal_16"
-        android:layout_marginTop="@dimen/spacing_normal_16"
-        android:layout_marginEnd="@dimen/spacing_normal_16" />
-
-    <include
-        android:id="@+id/spinner_au_inc"
-        layout="@layout/spinner_au"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/spacing_normal_16"
-        android:layout_marginTop="@dimen/spacing_normal_16"
-        android:layout_marginEnd="@dimen/spacing_normal_16" />
-
-    <include
-        android:id="@+id/spinner_c_inc"
-        layout="@layout/spinner_c"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/spacing_normal_16"
-        android:layout_marginTop="@dimen/spacing_normal_16"
-        android:layout_marginEnd="@dimen/spacing_normal_16" />
-
-    <include
-        android:id="@+id/spinner_i_inc"
-        layout="@layout/spinner_i"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/spacing_normal_16"
-        android:layout_marginTop="@dimen/spacing_normal_16"
-        android:layout_marginEnd="@dimen/spacing_normal_16" />
-
-    <include
-        android:id="@+id/spinner_a_inc"
-        layout="@layout/spinner_a"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/spacing_normal_16"
-        android:layout_marginTop="@dimen/spacing_normal_16"
-        android:layout_marginEnd="@dimen/spacing_normal_16" />
-
-    <Button
-        android:id="@+id/btn_count"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="@string/text_show_result_btn"
-        android:layout_gravity="center"
-        android:background="@color/colorPrimary"
-        android:textColor="@color/colorWhite"
-        android:layout_marginTop="@dimen/spacing_normal_16"/>
-</LinearLayout>
+    </androidx.viewpager.widget.ViewPager>
+</androidx.constraintlayout.widget.ConstraintLayout>
